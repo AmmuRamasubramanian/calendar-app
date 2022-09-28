@@ -1,0 +1,117 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    min-height: 100vh;
+    background-color:  #000033;
+}
+
+.wrapper{
+    width: 400px;
+    background-color:white;
+    border-radius: 10px;
+}
+
+.wrapper header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px 10px;
+}
+
+.calander-display ul{
+    display: flex;
+   list-style: none;
+   flex-wrap: wrap;
+   text-align: center;
+}
+
+header .currentDate{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+header .icons span{
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0px 2px;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+}
+
+header .icons span:hover{
+    background-color:#e6e6ff;
+}
+
+header .icons span:last-child{
+    margin-right: -10px;
+}
+
+.calander-display ul li{
+    width: calc(100% / 7);
+    position: relative;
+}
+
+.calander-display{
+    padding: 20px;
+}
+
+.calander-display .weeks{
+    font-weight: 500;
+}
+
+.calander-display .Days{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.calander-display .Days li{
+    margin-top: 20px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.calander-display .Days li.inactive{
+     color: #aaa;
+}
+
+.calander-display .Days li.active{
+    color:black;
+    font-weight: 600;
+}
+
+.calander-display .Days li::before{
+    position: absolute;
+    content: '';
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    z-index: -1;
+}
+
+.calander-display .Days li:hover::before{
+    background-color: #f2f2f2;
+}
+
+.calander-display .Days li.active::before{
+    background-color: #ccccff;
+}
+
+
+
+
+
+
